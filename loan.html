@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diamond Lending Bank</title>
+</head>
+<body>
+<h1>Diamond Lending Bank</h1>
+<h3>Fill out this form to see if you qualify for a loan</h3>
+<form name="loan">
+    <label for="salary">Salary</label><br>
+    <input type="text" id="salary" name="salary"><br>
+    <label for="credit">Credit Score</label><br>
+    <input type="text" id="credit" name="credit"><br>
+    <label for="months">Months at Job (number)</label><br>
+    <input type="text" id="months" name="months"><br>
+</form>
+<script>
+    function calculate() {
+        let salary = document.loan.salary.value;
+        let credit = document.loan.credit.value;
+        let months = document.loan.months.value;
+
+       if  ((salary >= 40000) &&
+           (credit >= 600)) {
+
+           print("You've been approved!");
+       }
+        if  ((salary >= 40000) &&
+            (credit < 600) &&
+            (months > 12)) {
+
+            print("You've been approved!");
+        }
+        if  ((salary < 40000) &&
+            (credit >= 600) &&
+            (months > 12)) {
+
+            print("You've been approved!");
+        }
+        else {
+            print("You've been denied.")
+        }
+    }
+</script>
+</body>
+</html>
